@@ -222,9 +222,8 @@ export class DatadogServiceEntityProvider implements EntityProvider {
       "unknown";
 
     // Extract repository information if available
-    const repos = attributes.repos || [];
-    const primaryRepo =
-      repos.find((repo: any) => repo.provider === "github") || repos[0];
+    const repos = attributes.datadog.codeLocations || [];
+    const primaryRepo = repos.length > 0 ? repos[0] : null;
 
     // Extract relationships using a helper function
     const relationships = this.extractRelationships(service); // tood: add to spec
