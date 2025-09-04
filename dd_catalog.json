@@ -1,0 +1,401 @@
+{
+  "data": [
+    {
+      "id": "3bb1e848-0033-457f-ab0a-4ac85856a7be",
+      "type": "entity",
+      "attributes": {
+        "apiVersion": "v3",
+        "description": "Music player app",
+        "displayName": "Music Player App",
+        "kind": "frontend",
+        "name": "music-player-app",
+        "namespace": "default",
+        "owner": "team-a",
+        "tags": ["datadog-test"]
+      },
+      "relationships": {
+        "relatedEntities": {
+          "data": [
+            {
+              "id": "frontend:default/music-player-app:RelationTypeDependsOn:service:default/music-player-service",
+              "type": "relatedEntity"
+            },
+            {
+              "id": "frontend:default/music-player-app:RelationTypePartsOf:system:default/music-player-system",
+              "type": "relatedEntity"
+            },
+            {
+              "id": "frontend:default/music-player-app:RelationTypeOwnedBy:team:default/team-a",
+              "type": "relatedEntity"
+            }
+          ],
+          "meta": {
+            "createdAt": "2025-09-02T15:07:08.355044Z",
+            "modifiedAt": "2025-09-02T15:07:08.355044Z",
+            "source": "schema",
+            "definedBy": "frontend:default/music-player-app"
+          }
+        },
+        "schema": {
+          "data": {
+            "id": "3bb1e848-0033-457f-ab0a-4ac85856a7be",
+            "type": "schema"
+          }
+        }
+      },
+      "meta": {
+        "createdAt": "2025-09-02T15:07:08.225641Z",
+        "modifiedAt": "2025-09-02T15:07:08.225641677Z",
+        "ingestionSource": "api",
+        "origin": "dd_ui"
+      }
+    },
+    {
+      "id": "cfe97835-ae46-4c5f-90b5-271f89429bdc",
+      "type": "entity",
+      "attributes": {
+        "apiVersion": "v3",
+        "description": "This is for testing",
+        "displayName": "Music Player Service",
+        "kind": "service",
+        "name": "music-player-service",
+        "namespace": "default",
+        "owner": "team-a"
+      },
+      "relationships": {
+        "relatedEntities": {
+          "data": [
+            {
+              "id": "service:default/music-player-service:RelationTypeDependencyOf:frontend:default/music-player-app",
+              "type": "relatedEntity"
+            },
+            {
+              "id": "service:default/music-player-service:RelationTypePartsOf:system:default/music-player-system",
+              "type": "relatedEntity"
+            },
+            {
+              "id": "service:default/music-player-service:RelationTypeOwnedBy:team:default/team-a",
+              "type": "relatedEntity"
+            }
+          ],
+          "meta": {
+            "createdAt": "2025-09-02T15:05:18.664509Z",
+            "modifiedAt": "2025-09-02T15:05:18.664509Z",
+            "source": "schema",
+            "definedBy": "service:default/music-player-service"
+          }
+        },
+        "schema": {
+          "data": {
+            "id": "cfe97835-ae46-4c5f-90b5-271f89429bdc",
+            "type": "schema"
+          }
+        }
+      },
+      "meta": {
+        "createdAt": "2025-09-02T15:05:18.466284Z",
+        "modifiedAt": "2025-09-02T15:05:18.466283961Z",
+        "ingestionSource": "api",
+        "origin": "dd_ui"
+      }
+    },
+    {
+      "id": "003066ac-eb65-4057-b263-b0fe22b407cb",
+      "type": "entity",
+      "attributes": {
+        "apiVersion": "v3",
+        "description": "test system",
+        "displayName": "Music Player System",
+        "kind": "system",
+        "name": "music-player-system",
+        "namespace": "default",
+        "owner": "team-a",
+        "tags": ["hello-world"]
+      },
+      "relationships": {
+        "relatedEntities": {
+          "data": [
+            {
+              "id": "system:default/music-player-system:RelationTypeHasPart:frontend:default/music-player-app",
+              "type": "relatedEntity"
+            },
+            {
+              "id": "system:default/music-player-system:RelationTypeHasPart:service:default/music-player-service",
+              "type": "relatedEntity"
+            },
+            {
+              "id": "system:default/music-player-system:RelationTypeOwnedBy:team:default/team-a",
+              "type": "relatedEntity"
+            }
+          ],
+          "meta": {
+            "createdAt": "2025-09-02T21:24:45.057955Z",
+            "modifiedAt": "2025-09-02T21:24:45.057955Z",
+            "source": "schema",
+            "definedBy": "system:default/music-player-system"
+          }
+        },
+        "schema": {
+          "data": {
+            "id": "003066ac-eb65-4057-b263-b0fe22b407cb",
+            "type": "schema"
+          }
+        }
+      },
+      "meta": {
+        "createdAt": "2025-09-02T21:24:44.86137Z",
+        "modifiedAt": "2025-09-02T21:24:44.861370187Z",
+        "ingestionSource": "api",
+        "origin": "dd_ui"
+      }
+    }
+  ],
+  "meta": { "count": 3, "includeCount": 12 },
+  "links": {
+    "self": "/api/v2/catalog/entity?include=relation\u0026include=schema\u0026page%5Blimit%5D=100\u0026page%5Boffset%5D=0"
+  },
+  "included": [
+    {
+      "id": "3bb1e848-0033-457f-ab0a-4ac85856a7be",
+      "type": "schema",
+      "attributes": {
+        "schema": {
+          "apiVersion": "v3",
+          "kind": "frontend",
+          "metadata": {
+            "name": "music-player-app",
+            "namespace": "default",
+            "description": "Music player app",
+            "displayName": "Music Player App",
+            "tags": ["datadog-test"],
+            "owner": "team-a",
+            "managed": {
+              "origin": { "origin": "dd_ui", "detail": "editor" },
+              "ingestionSource": "api",
+              "createdAt": "2025-09-02T15:07:08.225641Z",
+              "modifiedAt": "2025-09-02T15:07:08.225641677Z"
+            }
+          },
+          "datadog": {
+            "codeLocations": [
+              {
+                "repositoryURL": "github.com/external-spotify-portal-demo/podcast-react-app"
+              }
+            ]
+          },
+          "spec": {
+            "lifecycle": "experimental",
+            "type": "browser",
+            "dependsOn": ["service:music-player-service"]
+          }
+        }
+      }
+    },
+    {
+      "id": "frontend:default/music-player-app:RelationTypeDependsOn:service:default/music-player-service",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "service",
+        "name": "music-player-service",
+        "namespace": "default",
+        "type": "RelationTypeDependsOn"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T15:07:08.355049Z",
+        "modifiedAt": "2025-09-02T15:07:08.355049Z",
+        "source": "schema",
+        "definedBy": "frontend:default/music-player-app"
+      }
+    },
+    {
+      "id": "frontend:default/music-player-app:RelationTypePartsOf:system:default/music-player-system",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "system",
+        "name": "music-player-system",
+        "namespace": "default",
+        "type": "RelationTypePartsOf"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T21:24:45.05796Z",
+        "modifiedAt": "2025-09-02T21:24:45.05796Z",
+        "source": "schema",
+        "definedBy": "system:default/music-player-system"
+      }
+    },
+    {
+      "id": "frontend:default/music-player-app:RelationTypeOwnedBy:team:default/team-a",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "team",
+        "name": "team-a",
+        "namespace": "default",
+        "type": "RelationTypeOwnedBy"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T15:07:08.355044Z",
+        "modifiedAt": "2025-09-02T15:07:08.355044Z",
+        "source": "schema",
+        "definedBy": "frontend:default/music-player-app"
+      }
+    },
+    {
+      "id": "cfe97835-ae46-4c5f-90b5-271f89429bdc",
+      "type": "schema",
+      "attributes": {
+        "schema": {
+          "apiVersion": "v3",
+          "kind": "service",
+          "metadata": {
+            "name": "music-player-service",
+            "namespace": "default",
+            "description": "This is for testing",
+            "displayName": "Music Player Service",
+            "owner": "team-a",
+            "managed": {
+              "origin": { "origin": "dd_ui", "detail": "editor" },
+              "ingestionSource": "api",
+              "createdAt": "2025-09-02T15:05:18.466284Z",
+              "modifiedAt": "2025-09-02T15:05:18.466283961Z"
+            }
+          },
+          "datadog": {
+            "codeLocations": [
+              {
+                "repositoryURL": "github.com/external-spotify-portal-demo/podcast-spring-boot-service"
+              }
+            ]
+          },
+          "spec": { "lifecycle": "production" }
+        }
+      }
+    },
+    {
+      "id": "service:default/music-player-service:RelationTypeDependencyOf:frontend:default/music-player-app",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "frontend",
+        "name": "music-player-app",
+        "namespace": "default",
+        "type": "RelationTypeDependencyOf"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T15:07:08.35505Z",
+        "modifiedAt": "2025-09-02T15:07:08.35505Z",
+        "source": "schema",
+        "definedBy": "frontend:default/music-player-app"
+      }
+    },
+    {
+      "id": "service:default/music-player-service:RelationTypePartsOf:system:default/music-player-system",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "system",
+        "name": "music-player-system",
+        "namespace": "default",
+        "type": "RelationTypePartsOf"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T21:24:45.057962Z",
+        "modifiedAt": "2025-09-02T21:24:45.057962Z",
+        "source": "schema",
+        "definedBy": "system:default/music-player-system"
+      }
+    },
+    {
+      "id": "service:default/music-player-service:RelationTypeOwnedBy:team:default/team-a",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "team",
+        "name": "team-a",
+        "namespace": "default",
+        "type": "RelationTypeOwnedBy"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T15:05:18.664509Z",
+        "modifiedAt": "2025-09-02T15:05:18.664509Z",
+        "source": "schema",
+        "definedBy": "service:default/music-player-service"
+      }
+    },
+    {
+      "id": "003066ac-eb65-4057-b263-b0fe22b407cb",
+      "type": "schema",
+      "attributes": {
+        "schema": {
+          "apiVersion": "v3",
+          "kind": "system",
+          "metadata": {
+            "name": "music-player-system",
+            "namespace": "default",
+            "description": "test system",
+            "displayName": "Music Player System",
+            "tags": ["hello-world"],
+            "owner": "team-a",
+            "managed": {
+              "origin": { "origin": "dd_ui", "detail": "editor" },
+              "ingestionSource": "api",
+              "createdAt": "2025-09-02T21:24:44.86137Z",
+              "modifiedAt": "2025-09-02T21:24:44.861370187Z"
+            }
+          },
+          "spec": {
+            "lifecycle": "production",
+            "components": [
+              "frontend:music-player-app",
+              "service:music-player-service"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "system:default/music-player-system:RelationTypeHasPart:frontend:default/music-player-app",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "frontend",
+        "name": "music-player-app",
+        "namespace": "default",
+        "type": "RelationTypeHasPart"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T21:24:45.057959Z",
+        "modifiedAt": "2025-09-02T21:24:45.057959Z",
+        "source": "schema",
+        "definedBy": "system:default/music-player-system"
+      }
+    },
+    {
+      "id": "system:default/music-player-system:RelationTypeHasPart:service:default/music-player-service",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "service",
+        "name": "music-player-service",
+        "namespace": "default",
+        "type": "RelationTypeHasPart"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T21:24:45.057961Z",
+        "modifiedAt": "2025-09-02T21:24:45.057961Z",
+        "source": "schema",
+        "definedBy": "system:default/music-player-system"
+      }
+    },
+    {
+      "id": "system:default/music-player-system:RelationTypeOwnedBy:team:default/team-a",
+      "type": "relatedEntity",
+      "attributes": {
+        "kind": "team",
+        "name": "team-a",
+        "namespace": "default",
+        "type": "RelationTypeOwnedBy"
+      },
+      "meta": {
+        "createdAt": "2025-09-02T21:24:45.057955Z",
+        "modifiedAt": "2025-09-02T21:24:45.057955Z",
+        "source": "schema",
+        "definedBy": "system:default/music-player-system"
+      }
+    }
+  ]
+}

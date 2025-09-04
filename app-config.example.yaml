@@ -1,0 +1,32 @@
+# Example configuration for Datadog Software Catalog Entity Provider
+catalog:
+  providers:
+    datadogService:
+      # Datadog API Key - use environment variable for security
+      apiKey: '${DATADOG_API_KEY}'
+      
+      # Datadog Application Key - use environment variable for security
+      applicationKey: '${DATADOG_APPLICATION_KEY}'
+      
+      # Optional: Datadog site (default: datadoghq.com)
+      # For EU: datadoghq.eu
+      # For US3: us3.datadoghq.com
+      # For US5: us5.datadoghq.com
+      # For AP1: ap1.datadoghq.com
+      site: 'datadoghq.com'
+      
+      # Optional: Default owner for services without owner information
+      defaultOwner: 'platform-team'
+      
+      # Optional: Refresh schedule 
+      # Default: every 60 minutes
+      schedule:
+        frequency:
+          minutes: 60
+        timeout:
+          minutes: 50
+      
+      # Alternative schedule format (cron expression)
+      # schedule: '0 */1 * * *'  # Every hour
+      # schedule: '0 */6 * * *'  # Every 6 hours
+      # schedule: '0 0 * * *'    # Daily at midnight 

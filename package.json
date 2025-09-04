@@ -1,0 +1,58 @@
+{
+  "name": "@internal/plugin-datadog-entity-provider",
+  "version": "0.0.2",
+  "description": "Backstage entity provider for Datadog Software Catalog",
+  "main": "dist/index.cjs.js",
+  "types": "dist/index.d.ts",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.cjs.js",
+    "types": "dist/index.d.ts",
+    "registry": "http://localhost:4873"
+  },
+  "backstage": {
+    "role": "backend-plugin-module",
+    "pluginId": "catalog",
+    "pluginPackage": "@backstage/plugin-catalog-backend"
+  },
+  "scripts": {
+    "start": "backstage-cli package start",
+    "build": "backstage-cli package build",
+    "lint": "backstage-cli package lint",
+    "test": "backstage-cli package test",
+    "tsc": "tsc",
+    "clean": "backstage-cli package clean",
+    "prepack": "backstage-cli package prepack",
+    "postpack": "backstage-cli package postpack",
+    "publish": "yarn npm publish"
+  },
+  "dependencies": {
+    "@backstage/backend-plugin-api": "^1.0.2",
+    "@backstage/catalog-model": "^1.7.3",
+    "@backstage/plugin-catalog-node": "^1.17.2",
+    "@backstage/types": "^1.1.1",
+    "lodash": "^4.17.21",
+    "winston": "^3.2.1",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@backstage/backend-test-utils": "^1.1.0",
+    "@backstage/cli": "^0.29.2",
+    "@types/lodash": "^4",
+    "typescript": "~5.3.0"
+  },
+  "files": [
+    "dist",
+    "config.d.ts"
+  ],
+  "configSchema": "config.d.ts",
+  "typesVersions": {
+    "*": {
+      "index": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "packageManager": "yarn@4.9.4"
+}
